@@ -45,7 +45,7 @@ public class CertidaoNascimentoImpl implements CertidaoNascimento {
    dia = dtNasc.get(Calendar.DAY_OF_WEEK);
   } catch (Exception e) {
   }
-  return dias[dia];
+  return dias[dia - 1];
  }
 
 }
