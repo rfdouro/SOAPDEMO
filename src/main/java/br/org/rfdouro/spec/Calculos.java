@@ -6,12 +6,18 @@ import jakarta.jws.soap.SOAPBinding;
 
 @WebService
 @SOAPBinding(style = SOAPBinding.Style.RPC)
-public interface CertidaoNascimento {
+public interface Calculos {
 
  @WebMethod
  int calculaIdade(String dtNascimento);
 
  @WebMethod
  String diaSemanaNascimento(String dtNascimento);
+
+ @WebMethod
+ String diferencaIdade(String dtNascimento1, String dtNascimento2);
+
+ @WebMethod
+ Long hojeMillis();
 
 }
