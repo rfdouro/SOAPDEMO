@@ -13,6 +13,9 @@ public class CalculosImpl implements Calculos {
 
   private final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
+  /*
+   * calcula a quantidade em anos para uma data de nascimengto
+   */
   @Override
   public int calculaIdade(String dtNascimento) {
     int calc = 0;
@@ -34,6 +37,9 @@ public class CalculosImpl implements Calculos {
     return calc;
   }
 
+  /*
+   * retorna o dia da semamana em referencia a uma data
+   */
   @Override
   public String diaSemanaNascimento(String dtNascimento) {
     String[] dias = { "Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb" };
@@ -48,6 +54,9 @@ public class CalculosImpl implements Calculos {
     return dias[dia - 1];
   }
 
+  /*
+   * calcula a diferença em dias entre duas datas
+   */
   @Override
   public String diferencaIdade(String dtNascimento1, String dtNascimento2) {
     try {
@@ -73,6 +82,9 @@ public class CalculosImpl implements Calculos {
 
   }
 
+  /*
+   * retorna o momento (em milissegundos) em relação a data atual
+   */
   @Override
   public Long hojeMillis() {
     Calendar hoje = Calendar.getInstance();
