@@ -5,7 +5,7 @@ import jakarta.jws.WebService;
 import jakarta.jws.soap.SOAPBinding;
 
 @WebService
-@SOAPBinding(style = SOAPBinding.Style.DOCUMENT)
+@SOAPBinding(style = SOAPBinding.Style.RPC)
 public interface Calculos {
 
  @WebMethod
